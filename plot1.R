@@ -11,5 +11,5 @@ work <- subset(full, Date == "2007-02-02" | Date == "2007-02-01")
 
 png(file = "plot1.png")
 hist(work$Global_active_power, main = "Global Active Power", col = "red", xlab = "Global Active Power (kilowatts)", ylab="Frequency")
-dev.off()
+
        
