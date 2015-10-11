@@ -9,7 +9,9 @@ full$Date <- as.Date(full$Date, format = "%d/%m/%Y")
 full$Global_active_power <- as.numeric(as.character(full$Global_active_power))
 work <- subset(full, Date == "2007-02-02" | Date == "2007-02-01")
 
-png(file = "plot1.png")
+
 hist(work$Global_active_power, main = "Global Active Power", col = "red", xlab = "Global Active Power (kilowatts)", ylab="Frequency")
 
+dev.copy(png, file="plot1.png")
+dev.off()
        
